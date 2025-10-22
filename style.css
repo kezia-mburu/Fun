@@ -1,0 +1,166 @@
+/* === Base Styles === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* === Header === */
+header {
+  background-color: #007BFF;
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+}
+
+/* === Sections === */
+section {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* === Form Elements === */
+label, select {
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+input, select, button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+/* === Buttons === */
+.btn, #add-task, #next-question {
+  background: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover, #add-task:hover, #next-question:hover:not(:disabled) {
+  background: #218838;
+}
+
+#next-question {
+  background-color: #007BFF;
+}
+
+#next-question:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* === To-Do List === */
+#todo-section input {
+  width: 70%;
+  margin-right: 0.5rem;
+}
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+#todo-list li {
+  background: #e9ecef;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+
+#todo-list li.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* === Quiz App === */
+#quiz-box {
+  margin-top: 1rem;
+}
+
+#quiz-question {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#quiz-options {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+#quiz-options li {
+  background-color: #e9ecef;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#quiz-options li:hover {
+  background-color: #d1e7fd;
+}
+
+#quiz-options li.correct {
+  background-color: #c8f7c5;
+}
+
+#quiz-options li.wrong {
+  background-color: #f7c5c5;
+}
+
+#quiz-feedback {
+  font-style: italic;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+#quiz-timer {
+  font-weight: bold;
+  color: #007BFF;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  section {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  #quiz-options li {
+    font-size: 0.95rem;
+  }
+}

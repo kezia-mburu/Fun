@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🧠 Quiz App</title>
+
+  <!-- Style and Fonts -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>🧠 Quiz Categories</h1>
+    <nav>
+      <a href="index.html">⏰ Clock</a> |
+      <a href="todo.html">📝 To-Do</a>
+    </nav>
+  </header>
+
+  <section>
+    <label for="category-select" style="font-weight: bold;">Choose Category:</label>
+    <select id="category-select">
+      <option disabled selected>Select one...</option>
+    </select>
+
+    <div id="quiz-box">
+      <p id="quiz-question">Select a category to begin.</p>
+      <ul id="quiz-options"></ul>
+      <p>⏱ Time Left: <span id="quiz-timer">--</span></p>
+      <p id="quiz-feedback"></p>
+      <button id="next-question" disabled>Next</button>
+    </div>
+  </section>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

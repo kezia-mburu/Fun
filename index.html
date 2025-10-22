@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Suite - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🌟 Smart Productivity Suite</h1>
+    <nav>
+      <a href="todo.html">📝 To-Do</a> |
+      <a href="quiz.html">🧠 Quiz</a> |
+      <a href="index.html">⏰ Clock</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Current Time</h2>
+      <p id="current-time" style="font-size: 2rem; color: #007BFF;">--:--:--</p>
+    </section>
+
+    <section>
+      <h2>🌿 Daily Inspiration</h2>
+      <blockquote id="quote" style="font-style: italic;"></blockquote>
+    </section>
+
+    <section>
+      <h2>🎧 Relaxing Music</h2>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/5qap5aO4i9A" 
+        title="Lo-fi relaxing music" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section>
+      <h2>🚀 Jump Back In</h2>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="todo.html" class="btn">📝 Open To-Do</a>
+        <a href="quiz.html" class="btn">🧠 Start Quiz</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Live Clock
+    function updateClock() {
+      document.getElementById("current-time").textContent = new Date().toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // Daily Quotes
+    const quotes = [
+      "“Start where you are. Use what you have. Do what you can.” – Arthur Ashe",
+      "“Don’t watch the clock; do what it does. Keep going.” – Sam Levenson",
+      "“Small steps every day lead to big results.”",
+      "“Be so good they can’t ignore you.” – Steve Martin",
+      "“Believe you can and you’re halfway there.” – Theodore Roosevelt"
+    ];
+    document.getElementById("quote").textContent = quotes[Math.floor(Math.random() * quotes.length)];
+  </script>
+</body>
+
+</html>
